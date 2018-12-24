@@ -1,0 +1,13 @@
+sudo -i -u postgres
+
+createuser -P -d dummy
+
+createdb dummy
+
+psql -U dummy -d dummy -h 127.0.0.1
+
+psql -U dummy -f crtbl.sql -d dummy -h 127.0.0.1
+
+
+
+
